@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level>
+	<tile>
+		<posX>0</posX>
+		<posY>0</posY>
+		<textureRectX>0</textureRectX>
+		<textureRectY>0</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+</level>
