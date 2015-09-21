@@ -1,13 +1,14 @@
 #include "stdafx.h"
 #include "Tile.h"
 
-Tile::Tile(sf::Vector2f pos, int x, int y, int w, int h)
+Tile::Tile(sf::Vector2f pos, int x, int y, int w, int h, std::string t)
 {
 	setPosition(pos);
 	tileTX = x;
 	tileTY = y;
 	tileTWidth = w;
 	tileTHeight = h;
+	type = t;
 	loadTexture();
 }
 

@@ -28,6 +28,7 @@ using namespace rapidxml;
 #include <string>       // std::string
 #include <iostream>     // std::cout
 #include <sstream>      // std::stringstream
+#include <vector>
 ////////////////////////////////////////////////////////////
 ///Entrypoint of application 
 //////////////////////////////////////////////////////////// 
@@ -52,9 +53,8 @@ int main()
 
 	Player* p = new Player();
 
-	Tile* testTile = new Tile(sf::Vector2f(0, 0), 0, 0,50,50);
-	Tile* testTile2 = new Tile(sf::Vector2f(50, 0), 50, 50, 50, 50);
-	Tile* testTile3 = new Tile(sf::Vector2f(100, 0), 100, 100, 50, 50);
+	std::vector<Tile*> tiles;
+	//tiles.reserve(10);
 
 	//rapidxml::file<> xmlFile("Assets/Levels/level1.xml"); // Default template is char
 	//rapidxml::xml_document<> doc;
@@ -68,23 +68,47 @@ int main()
 	file.close();
 	std::string content(buffer.str());
 	doc.parse<0>(&content[0]);
-	std::cout << "Name of root node is: " << doc.first_node()->name() << "\n" << std::endl;
+
 	xml_node<> *pRoot = doc.first_node();
+	std::cout << "Name of root node is: " << doc.first_node()->name() << "\n" << std::endl;
 
-	xml_node<> *pNode = pRoot->first_node("node");
-	std::cout << "Name of root nodes first node is: " << pNode->first_node()->name() << "\n" << std::endl;
-
-	for (xml_node<> *pNode = pRoot->first_node("node"); pNode; pNode = pNode->next_sibling())
+	
+	xml_node<>* level = doc.first_node("level");
+	xml_node<>* tile = level->first_node("tile");
+	while (tile != NULL)
 	{
-		// This loop will walk you through two nodes:
-		//node attribute = "0" and then node attribute = "1"
-		// Do something here
+		std::string type = "";
+		int x = 0, y = 0, textureRectX = 0, textureRectY = 0, textureRectWidth = 0, textureRectHeight = 0;
 
+		std::cout << "Type: " << tile->first_attribute("type")->value() << std::endl;
+		type = tile->first_attribute("type")->value();
+
+		std::cout << "X:" << tile->first_node("posX")->value() << std::endl;
+		x = atoi(tile->first_node("posX")->value());
+
+		std::cout << "Y: " << tile->first_node("posY")->value() << std::endl;
+		y = atoi(tile->first_node("posY")->value());
+
+		std::cout << "textureRectX: " << tile->first_node("textureRectX")->value() << std::endl;
+		textureRectX = atoi(tile->first_node("textureRectX")->value());
+
+		std::cout << "textureRectY: " << tile->first_node("textureRectY")->value() << std::endl;
+		textureRectY = atoi(tile->first_node("textureRectY")->value());
+
+		std::cout << "textureRectWidth: " << tile->first_node("textureRectWidth")->value() << std::endl;
+		textureRectWidth = atoi(tile->first_node("textureRectWidth")->value());
+
+		std::cout << "textureRectHeight: " << tile->first_node("textureRectHeight")->value() << std::endl;
+		textureRectHeight = atoi(tile->first_node("textureRectHeight")->value());
+
+		//create the tile
+		Tile* t = new Tile(sf::Vector2f(x, y), textureRectX, textureRectY, textureRectWidth, textureRectHeight, type);
+		tiles.push_back(t);
+		std::cout << "Size of tiles vector: " << tiles.size() << std::endl;
+
+		tile = tile->next_sibling("tile");
 	}
 
-
-	//xml_node<> *node = doc.first_node("tile");
-	//std::cout << "Node 1, Attribute 1: " << node->first_attribute("x", 0, false) << std::endl;
 
 	// Start game loop 
 	while (window.isOpen())
@@ -110,9 +134,12 @@ int main()
 		//draw frame items
 
 		p->draw(*pWindow);
-		testTile->draw(*pWindow);
-		testTile2->draw(*pWindow);
-		testTile3->draw(*pWindow);
+
+		for (int i = 0; i < tiles.size(); i++)
+		{
+			Tile * t = tiles.at(i);
+			t->draw(window);
+		}
 
 		// Finally, display rendered frame on screen 
 		window.display();

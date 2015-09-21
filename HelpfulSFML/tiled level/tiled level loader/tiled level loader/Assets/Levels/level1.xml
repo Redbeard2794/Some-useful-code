@@ -1,10 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <level>
-	<tile>
+	<tile type='grass'>
 		<posX>0</posX>
 		<posY>0</posY>
-		<textureRectX>0</textureRectX>
-		<textureRectY>0</textureRectY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>50</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>100</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>150</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>200</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>250</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>300</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>350</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>400</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>450</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>500</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>550</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>600</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>650</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>700</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
+		<textureRectWidth>50</textureRectWidth>
+		<textureRectHeight>50</textureRectHeight>
+	</tile>
+	<tile type='grass'>
+		<posX>750</posX>
+		<posY>0</posY>
+		<textureRectX>50</textureRectX>
+		<textureRectY>50</textureRectY>
 		<textureRectWidth>50</textureRectWidth>
 		<textureRectHeight>50</textureRectHeight>
 	</tile>
