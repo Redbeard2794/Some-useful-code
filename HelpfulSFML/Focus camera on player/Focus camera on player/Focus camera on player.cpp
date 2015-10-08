@@ -56,13 +56,12 @@ int main()
 
 	sf::Sprite background2;
 	sf::Texture backgroundTexture2;
-	backgroundTexture2.loadFromFile("Assets/minmap.png");
+	backgroundTexture2.loadFromFile("Assets/minmap.png");//minimap
 	background2.setTexture(backgroundTexture2);
 	background2.setPosition(sf::Vector2f(-600, -300));
 
 	player_view.setViewport(sf::FloatRect(0, 0, 1, 1));
 	//minimapView.setViewport(sf::FloatRect(0.75f, 0, 0.25f, 0.25f));
-
 
 	// Start game loop 
 	while (window.isOpen())
@@ -88,12 +87,14 @@ int main()
 		p->Update();
 		//prepare frame
 		window.clear();
-
+		
 		//draw frame items
 		window.draw(background);
 		p->draw(*pWindow);
 		window.setView(minimap);
-		window.draw(background);
+		minimap.setCenter(p->getPosition());
+		//background.setColor(sf::Color::Blue);
+		window.draw(background2);//2
 		p->draw(*pWindow);
 
 		// Finally, display rendered frame on screen 
